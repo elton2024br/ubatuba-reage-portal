@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato — Ubatuba Reage</title>
+  <meta name="description" content="Entre em contato com a equipe do Ubatuba Reage. Respondemos em ate 48 horas.">
+  <meta property="og:title" content="Contato — Ubatuba Reage">
+  <meta property="og:description" content="Entre em contato com a equipe do Ubatuba Reage.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="nav-overlay">
+    <button class="close-btn" aria-label="Fechar menu">&times;</button>
+    <a href="index.html">Inicio</a>
+    <a href="materias.html">Materias</a>
+    <a href="denuncias.html">Faca sua Denuncia</a>
+    <a href="contato.html">Contato</a>
+    <a href="sobre.html">Sobre</a>
+  </div>
+
+  <header class="header">
+    <div style="display:flex;align-items:center;gap:16px;">
+      <button class="menu-btn" aria-label="Abrir menu de navegacao">&#9776;</button>
+      <a href="index.html" class="logo">Ubatuba <span>Reage</span></a>
+    </div>
+  </header>
+
+  <div class="page-section">
+    <h1>Contato</h1>
+    <p class="subtitle">Envie uma mensagem para a equipe do Ubatuba Reage. Respondemos em ate 48 horas.</p>
+
+    <form action="https://formspree.io/f/SEU_ID_AQUI" method="POST" data-formspree>
+      <div class="form-group">
+        <label for="ct-nome">Nome *</label>
+        <input type="text" id="ct-nome" name="nome" placeholder="Seu nome completo" required>
+      </div>
+      <div class="form-group">
+        <label for="ct-email">Email *</label>
+        <input type="email" id="ct-email" name="email" placeholder="seu@email.com" required>
+      </div>
+      <div class="form-group">
+        <label for="ct-assunto">Assunto *</label>
+        <input type="text" id="ct-assunto" name="assunto" placeholder="Sobre o que deseja falar?" required>
+      </div>
+      <div class="form-group">
+        <label for="ct-mensagem">Mensagem *</label>
+        <textarea id="ct-mensagem" name="mensagem" placeholder="Escreva sua mensagem..." required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">ENVIAR MENSAGEM</button>
+    </form>
+
+    <p style="margin-top:24px;font-size:0.85rem;color:var(--muted);font-family:var(--font-serif);">
+      <strong>Nota:</strong> Para ativar o formulario, crie uma conta gratuita em <a href="https://formspree.io" target="_blank" style="color:var(--primary);">formspree.io</a> e substitua "SEU_ID_AQUI" pelo ID do seu formulario.
+    </p>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>&copy; 2026 Ubatuba Reage. Todos os direitos reservados.</p>
+      <a href="index.html" class="logo">Ubatuba <span>Reage</span></a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
