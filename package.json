@@ -1,0 +1,21 @@
+{
+  "name": "workspace",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "preinstall": "sh -c 'rm -f package-lock.json yarn.lock; case \"$npm_config_user_agent\" in pnpm/*) ;; *) if [ \"$HOSTINGER\" = \"1\" ] || [ -f /.dockerenv ]; then exit 0; fi; echo \"Use pnpm instead\" >&2; exit 1 ;; esac'",
+    "build": "npx pnpm run typecheck && npx pnpm -r --if-present run build",
+    "build:prod": "npx pnpm run typecheck && npx pnpm --filter @workspace/api-server run build && npx pnpm --filter @workspace/ubatuba-reage run build",
+    "start:prod": "node start.mjs",
+    "typecheck:libs": "tsc --build --force",
+    "typecheck": "npx pnpm run typecheck:libs && npx pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck"
+  },
+  "private": true,
+  "devDependencies": {
+    "prettier": "^3.8.1",
+    "typescript": "~5.9.2"
+  },
+  "dependencies": {
+    "@replit/connectors-sdk": "^0.3.0"
+  }
+}
